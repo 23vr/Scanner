@@ -42,7 +42,7 @@ impl Json for Value {}
 async fn main() {
     let pool = PgPoolOptions::new()
         .max_connections(50)
-        .connect("postgres://postgres:47tc34tcbterkfb349crewd@unesty.mcinfos.de/postgres").await.unwrap();
+        .connect("postgres://postgres:password.domain.de/postgres").await.unwrap();
     println!("{}", "DB verbunden".green());
     let (tx, mut rx) = tokio::sync::mpsc::channel::<IpInfo>(10000);
 
